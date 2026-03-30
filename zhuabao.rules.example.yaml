@@ -1,0 +1,11 @@
+rules:
+  - id: demo-stub
+    match:
+      method: GET
+      urlIncludes: /anything/demo
+    action:
+      type: stub-json
+      status: 200
+      body:
+        ok: true
+        source: zhuabao

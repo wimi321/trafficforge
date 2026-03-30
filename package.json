@@ -1,0 +1,40 @@
+{
+  "name": "zhuabao",
+  "version": "0.1.0",
+  "description": "AI-native traffic capture workspace for agents, replay, and semantic exports.",
+  "type": "module",
+  "bin": {
+    "zhuabao": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run test"
+  },
+  "keywords": [
+    "proxy",
+    "mitm",
+    "capture",
+    "ai",
+    "agent",
+    "har",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/static": "^9.0.0",
+    "fastify": "^5.8.4",
+    "mockttp": "^4.2.3",
+    "undici": "^7.24.6",
+    "yaml": "^2.8.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}
