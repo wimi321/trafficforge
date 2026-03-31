@@ -1,6 +1,9 @@
 node_modules
 dist
 .trafficforge
+.zhuabao
 trafficforge.rules.yaml
+zhuabao.rules.yaml
 tmp-trafficforge-*
+tmp-zhuabao-*
 .DS_Store
