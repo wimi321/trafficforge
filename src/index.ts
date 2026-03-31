@@ -12,7 +12,7 @@ async function main() {
   await proxy.start();
   const api = await createApiServer(config, store, proxy);
 
-  console.log('Zhuabao is live.');
+  console.log('TrafficForge is live.');
   console.log(`Dashboard: http://127.0.0.1:${config.dashboardPort}`);
   console.log(`HTTP proxy: http://127.0.0.1:${config.proxyPort}`);
   console.log('Set HTTP_PROXY and HTTPS_PROXY to the proxy endpoint to capture traffic.');

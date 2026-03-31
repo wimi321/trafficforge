@@ -1,0 +1,42 @@
+{
+  "sessions": [
+    {
+      "id": "1",
+      "protocol": "https",
+      "method": "GET",
+      "url": "https://example.com/foo?token=secret",
+      "path": "/foo?token=secret",
+      "host": "example.com",
+      "startedAt": "2026-03-31T00:00:00.000Z",
+      "statusCode": 401,
+      "durationMs": 120,
+      "source": "http",
+      "tags": [],
+      "notes": [
+        "auth-flow"
+      ],
+      "issues": [
+        "auth-failure"
+      ],
+      "request": {
+        "headers": {
+          "authorization": "Bearer secret"
+        },
+        "body": {
+          "size": 0,
+          "truncated": false
+        }
+      },
+      "response": {
+        "headers": {
+          "set-cookie": "abc"
+        },
+        "body": {
+          "size": 0,
+          "truncated": false
+        }
+      }
+    }
+  ],
+  "websocketFrames": []
+}

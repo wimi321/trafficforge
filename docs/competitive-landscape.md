@@ -9,7 +9,7 @@ There is still no dominant open-source project that treats AI agents as first-cl
 - low-level powerhouses like `mitmproxy`, `whistle`, and `proxify`
 - polished human-facing products like `HTTP Toolkit`, `Requestly`, `Proxyman`, and `Charles`
 
-Zhuabao is positioned in the gap between those camps: local-first capture plus agent-ready normalization.
+TrafficForge is positioned in the gap between those camps: local-first capture plus agent-ready normalization.
 
 ## What the market already does well
 

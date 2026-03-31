@@ -35,9 +35,9 @@ const ruleSchema = z.object({
   ]),
 });
 
-export type ZhuabaoRule = z.infer<typeof ruleSchema>;
+export type TrafficForgeRule = z.infer<typeof ruleSchema>;
 
-export function loadRules(rulesPath: string): ZhuabaoRule[] {
+export function loadRules(rulesPath: string): TrafficForgeRule[] {
   if (!fs.existsSync(rulesPath)) return [];
   const parsed = YAML.parse(fs.readFileSync(rulesPath, 'utf8'));
   const rawRules = Array.isArray(parsed?.rules) ? parsed.rules : [];

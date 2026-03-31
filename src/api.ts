@@ -2,12 +2,12 @@ import path from 'node:path';
 import Fastify from 'fastify';
 import fastifyStatic from '@fastify/static';
 import { fetch } from 'undici';
-import type { ZhuabaoConfig } from './config.js';
+import type { TrafficForgeConfig } from './config.js';
 import { buildPromptPack } from './exporter.js';
 import { SessionStore } from './storage.js';
 import { ProxyService } from './proxy.js';
 
-export async function createApiServer(config: ZhuabaoConfig, store: SessionStore, proxy: ProxyService) {
+export async function createApiServer(config: TrafficForgeConfig, store: SessionStore, proxy: ProxyService) {
   const app = Fastify({ logger: false });
 
   await app.register(fastifyStatic, {

@@ -40,7 +40,7 @@ export function buildPromptPack(store: SessionStore, options: ExportOptions): st
 
   const summary = summarize(sessions);
   const lines = [
-    '# Zhuabao Prompt Pack',
+    '# TrafficForge Prompt Pack',
     '',
     `Generated at: ${new Date().toISOString()}`,
     `Captured requests: ${summary.total}`,

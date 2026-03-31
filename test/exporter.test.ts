@@ -6,7 +6,7 @@ import path from 'node:path';
 
 describe('buildPromptPack', () => {
   it('redacts sensitive headers and urls', () => {
-    const tmpDir = fs.mkdtempSync(path.join(process.cwd(), 'tmp-zhuabao-'));
+    const tmpDir = fs.mkdtempSync(path.join(process.cwd(), 'tmp-trafficforge-'));
     const store = new SessionStore(tmpDir);
     store.upsert({
       id: '1',

@@ -1,18 +1,18 @@
 import { getLocal } from 'mockttp';
 import type { CompletedRequest, CompletedResponse, Mockttp, WebSocketMessage } from 'mockttp';
-import type { ZhuabaoConfig } from './config.js';
+import type { TrafficForgeConfig } from './config.js';
 import type { CaptureSession } from './types.js';
 import { SessionStore } from './storage.js';
-import { loadRules, type ZhuabaoRule } from './rules.js';
+import { loadRules, type TrafficForgeRule } from './rules.js';
 
 type MinimalResponse = Pick<CompletedResponse, 'id' | 'statusCode' | 'headers' | 'body' | 'timingEvents'>;
 
 export class ProxyService {
   private proxy: Mockttp | undefined;
-  private rules: ZhuabaoRule[] = [];
+  private rules: TrafficForgeRule[] = [];
 
   constructor(
-    private readonly config: ZhuabaoConfig,
+    private readonly config: TrafficForgeConfig,
     private readonly store: SessionStore,
   ) {}
 
@@ -156,7 +156,7 @@ export class ProxyService {
   }
 }
 
-function createRuleBuilder(proxy: Mockttp, rule: ZhuabaoRule) {
+function createRuleBuilder(proxy: Mockttp, rule: TrafficForgeRule) {
   const method = rule.match.method?.toUpperCase();
   switch (method) {
     case 'GET':
@@ -178,7 +178,7 @@ function createRuleBuilder(proxy: Mockttp, rule: ZhuabaoRule) {
   }
 }
 
-function matchRuleId(rules: ZhuabaoRule[], method: string, url: string): string | undefined {
+function matchRuleId(rules: TrafficForgeRule[], method: string, url: string): string | undefined {
   return rules.find((rule) => {
     if (rule.match.method && rule.match.method.toUpperCase() !== method.toUpperCase()) return false;
     if (rule.match.urlIncludes && !url.includes(rule.match.urlIncludes)) return false;

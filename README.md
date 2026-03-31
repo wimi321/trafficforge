@@ -1,6 +1,6 @@
-# Zhuabao
+# TrafficForge
 
-Zhuabao is an AI-native traffic capture workspace: a local proxy that records HTTP flows, attaches light semantic hints, supports declarative rewrite/mock rules, replays captured requests, and exports sanitized prompt packs for agents.
+TrafficForge is an AI-native traffic capture workspace: a local proxy that records HTTP flows, attaches light semantic hints, supports declarative rewrite/mock rules, replays captured requests, and exports sanitized prompt packs for agents.
 
 ## Why this exists
 
@@ -12,14 +12,14 @@ Classic tools like mitmproxy, HTTP Toolkit, Charles, Proxyman, Requestly, and Fi
 - one-click replay over captured traffic
 - searchable local API for automation
 
-Zhuabao is the missing glue layer.
+TrafficForge is the missing glue layer.
 
 ## What ships in this repo
 
 - Real local proxy powered by `mockttp`
 - Live dashboard on `http://127.0.0.1:8788`
-- Session persistence in `.zhuabao/sessions.json`
-- Declarative rules via `zhuabao.rules.yaml`
+- Session persistence in `.trafficforge/sessions.json`
+- Declarative rules via `trafficforge.rules.yaml`
 - Prompt-pack export in JSON or Markdown
 - Replay endpoint for captured requests
 - WebSocket frame capture hooks
@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-Then point your app or shell at Zhuabao:
+Then point your app or shell at TrafficForge:
 
 ```bash
 export HTTP_PROXY=http://127.0.0.1:8787
@@ -45,7 +45,7 @@ Open the dashboard:
 
 ## Example rules
 
-Create `zhuabao.rules.yaml`:
+Create `trafficforge.rules.yaml`:
 
 ```yaml
 rules:
@@ -66,7 +66,7 @@ rules:
     action:
       type: rewrite-request
       updateHeaders:
-        x-zhuabao-lab: enabled
+        x-trafficforge-lab: enabled
 ```
 
 Reload rules from the UI or call:
@@ -94,7 +94,7 @@ curl -X POST http://127.0.0.1:8788/api/export \
 
 ## Positioning
 
-Recent research on `2026-03-31` suggests there is still no dominant agent-first capture tool. `mitmproxy` is the best open foundation, `HTTP Toolkit` is the closest product to semantic analysis, and `Proxyman`/`Requestly` shine in workflow UX. Zhuabao is intentionally narrower and more composable: capture, normalize, redact, replay, export.
+Recent research on `2026-03-31` suggests there is still no dominant agent-first capture tool. `mitmproxy` is the best open foundation, `HTTP Toolkit` is the closest product to semantic analysis, and `Proxyman`/`Requestly` shine in workflow UX. TrafficForge is intentionally narrower and more composable: capture, normalize, redact, replay, export.
 
 ## Roadmap
 

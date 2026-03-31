@@ -1,0 +1,117 @@
+{
+  "sessions": [
+    {
+      "id": "f46e0300-4e43-400f-987f-06d8a2de3f4e",
+      "protocol": "http",
+      "method": "POST",
+      "url": "http://httpbin.org/anything/zhuabao-demo",
+      "path": "/anything/zhuabao-demo",
+      "host": "httpbin.org",
+      "startedAt": "2026-03-30T17:46:58.752Z",
+      "durationMs": 777,
+      "statusCode": 200,
+      "source": "http",
+      "tags": [],
+      "matchedRuleId": "ac7521e8-2245-4ad0-a0dd-da0ba536b163",
+      "notes": [
+        "json-request"
+      ],
+      "issues": [],
+      "request": {
+        "headers": {
+          "host": "httpbin.org",
+          "user-agent": "curl/8.7.1",
+          "accept": "*/*",
+          "content-type": "application/json",
+          "content-length": "17"
+        },
+        "body": {
+          "size": 17,
+          "text": "{\"hello\":\"world\"}",
+          "truncated": false
+        }
+      },
+      "response": {
+        "headers": {
+          "date": "Mon, 30 Mar 2026 17:46:59 GMT",
+          "content-type": "application/json",
+          "content-length": "469",
+          "connection": "keep-alive",
+          "server": "gunicorn/19.9.0",
+          "access-control-allow-origin": "*",
+          "access-control-allow-credentials": "true"
+        },
+        "body": {
+          "size": 469,
+          "text": "{\n  \"args\": {}, \n  \"data\": \"{\\\"hello\\\":\\\"world\\\"}\", \n  \"files\": {}, \n  \"form\": {}, \n  \"headers\": {\n    \"Accept\": \"*/*\", \n    \"Content-Length\": \"17\", \n    \"Content-Type\": \"application/json\", \n    \"Host\": \"httpbin.org\", \n    \"User-Agent\": \"curl/8.7.1\", \n    \"X-Amzn-Trace-Id\": \"Root=1-69cab713-3d3432597f0ee746537a27d5\"\n  }, \n  \"json\": {\n    \"hello\": \"world\"\n  }, \n  \"method\": \"POST\", \n  \"origin\": \"207.127.89.112\", \n  \"url\": \"http://httpbin.org/anything/zhuabao-demo\"\n}\n",
+          "truncated": false
+        }
+      }
+    },
+    {
+      "id": "8ea7e757-02f2-44cf-af3c-7ba639b4878e",
+      "protocol": "http",
+      "method": "GET",
+      "url": "http://example.com/zhuabao-stub",
+      "path": "/zhuabao-stub",
+      "host": "example.com",
+      "startedAt": "2026-03-30T17:48:45.071Z",
+      "source": "http",
+      "tags": [],
+      "matchedRuleId": "demo-stub",
+      "notes": [],
+      "issues": [],
+      "request": {
+        "headers": {
+          "host": "example.com",
+          "user-agent": "curl/8.7.1",
+          "accept": "*/*"
+        },
+        "body": {
+          "size": 0,
+          "text": "",
+          "truncated": false
+        }
+      }
+    },
+    {
+      "id": "f9fdf7c1-0e9c-499a-a157-e2b07d0e3d63",
+      "protocol": "http",
+      "method": "GET",
+      "url": "http://example.com/zhuabao-stub?run=2",
+      "path": "/zhuabao-stub?run=2",
+      "host": "example.com",
+      "startedAt": "2026-03-30T17:50:58.653Z",
+      "durationMs": 5,
+      "statusCode": 202,
+      "source": "http",
+      "tags": [],
+      "matchedRuleId": "demo-stub",
+      "notes": [],
+      "issues": [],
+      "request": {
+        "headers": {
+          "host": "example.com",
+          "user-agent": "curl/8.7.1",
+          "accept": "*/*"
+        },
+        "body": {
+          "size": 0,
+          "text": "",
+          "truncated": false
+        }
+      },
+      "response": {
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "size": 25,
+          "text": "{\"ok\":true,\"mocked\":true}",
+          "truncated": false
+        }
+      }
+    }
+  ],
+  "websocketFrames": []
+}

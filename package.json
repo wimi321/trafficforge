@@ -1,10 +1,10 @@
 {
-  "name": "zhuabao",
+  "name": "trafficforge",
   "version": "0.1.0",
   "description": "AI-native traffic capture workspace for agents, replay, and semantic exports.",
   "type": "module",
   "bin": {
-    "zhuabao": "./dist/index.js"
+    "trafficforge": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
